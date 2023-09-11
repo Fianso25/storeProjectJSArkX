@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Store Project</title>
+		<link rel="stylesheet" href="/style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body>
+		<div class="banner">
+			<img src="/Assets/banner-4.png" alt="banner-shop" />
+			<div class="firstPhrase">Votre satisfaction, notre mission</div>
+			<div class="secondPhrase">Livraison rapide, sourire garanti.</div>
+		</div>
+		<div class="filters">
+			<button id="bestSellers" class="btnSort isActive">Best Sellers</button>
+			<button id="newestArrivals" class="btnSort">Newest Arrivals</button>
+			<button id="hightToLow" class="btnSort">Price: Hight to Low</button>
+		</div>
+		<div class="products-container"></div>
+		<div class="top">
+			<i class="fa-solid fa-arrow-up fa-xl"></i>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

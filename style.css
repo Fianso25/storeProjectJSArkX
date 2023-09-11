@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+	font-family: "Vogue";
+	src: url(/fonts/Vogue.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+:root {
+	--green: #c1e8d7;
+	--orange: #f15412;
+	--gray: #6c757d;
+	--stars: #ffc107;
+}
+
+.banner {
+	margin-block: 30px;
+	position: relative;
+	width: 1280px;
+	margin: 30px auto;
+}
+.banner img {
+	width: 1280px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+.banner .firstPhrase {
+	font-family: "Vogue";
+	filter: drop-shadow(5px 3px 6px rgba(0, 0, 0, 0.3));
+	font-size: 2.5rem;
+	color: darkslategray;
+	font-weight: 900;
+	position: absolute;
+	left: 30px;
+	top: 90px;
+	letter-spacing: 3px;
+	animation: translate 1s ease-out;
+}
+
+@keyframes translate {
+	0% {
+		left: -900px;
+	}
+	100% {
+		left: 30px;
+	}
+}
+.banner .secondPhrase {
+	font-family: "Vogue";
+	filter: drop-shadow(5px 3px 6px rgba(0, 0, 0, 0.3));
+	font-size: 2.5rem;
+	color: var(--orange);
+	font-weight: 900;
+	position: absolute;
+	left: 30px;
+	top: 180px;
+	letter-spacing: 3px;
+	animation: translate 2.5s ease-out;
+}
+.products-container {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	max-width: 1280px;
+	justify-content: center;
+	margin: 0 auto;
+}
+.card {
+	flex: 1 0 20%;
+	max-width: fit-content;
+	border: 2px solid var(--green);
+	margin: 5px;
+	border-radius: 30px;
+	padding: 10px;
+	font-family: "roboto";
+}
+.CONTAINER-3D {
+	perspective: 600px;
+	cursor: pointer;
+}
+.container-3d {
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	position: relative;
+}
+.container-3d:hover {
+	transform: rotateY(-180deg);
+}
+.imgProductsFace {
+	height: 274px;
+	width: 274px;
+	object-fit: cover;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+	backface-visibility: hidden;
+}
+.imgProductsBack {
+	height: 274px;
+	width: 274px;
+	object-fit: cover;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+.imgFaceContainer {
+	position: absolute;
+	left: 0;
+}
+.BS {
+	position: absolute;
+	left: 8%;
+	top: 5%;
+	background-color: hotpink;
+	border-radius: 10px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-block: 5px;
+	padding-inline: 8px;
+}
+.cardBody {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-left: 10px;
+}
+.category {
+	font-weight: 400;
+	font-size: 1.1rem;
+	color: var(--gray);
+}
+.title {
+	font-weight: 700;
+	font-size: 20px;
+	color: rgb(33, 37, 41);
+}
+.fa-solid,
+.fa-regular {
+	color: var(--stars);
+}
+.percent {
+	margin-left: 10px;
+	color: var(--gray);
+	font-weight: 400;
+	font-size: 1.3rem;
+}
+.priceOldPrice {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.price {
+	color: var(--orange);
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+.oldPrice {
+	text-decoration-line: line-through;
+	font-weight: 500;
+	font-size: 1rem;
+	color: var(--gray);
+}
+.filters {
+	margin-left: 9%;
+	margin-block: 20px;
+	display: flex;
+	gap: 10px;
+}
+.filters button {
+	background-color: #eaeaea;
+	color: black;
+	box-shadow: 1px 1px 2px 0.5px rgb(0, 0, 0, 0.3);
+	padding-inline: 10px;
+	padding-block: 7px;
+	border-radius: 10px;
+	border: none;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	font-family: "Roboto";
+}
+.isActive {
+	color: var(--orange) !important;
+	background-color: #fde1bd !important;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--orange);
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 30px;
+	right: 50px;
+	cursor: pointer;
+}
+.fa-arrow-up {
+	color: #fff;
+}
